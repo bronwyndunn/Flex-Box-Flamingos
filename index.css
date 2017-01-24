@@ -1,0 +1,37 @@
+.game-form {
+  display: flex;
+  flex-direction: row;
+}
+
+.board {
+  background-color: rgba(137, 212, 153, 0.5);
+
+  background-size: cover;
+}
+
+.sidebar {
+  width: 50%;
+}
+
+.view {
+  width: 50%;
+  display: flex;
+}
+
+.board {
+  display: flex;
+  min-height: 800px;
+  position: relative;
+  width: 100%;
+}
+
+.puddle {
+  display: flex;
+}
+
+
+.flamingo-img {
+  height: 120px;
+  width: auto;
+  margin: 15px;
+}
