@@ -1,5 +1,5 @@
 module.exports = {
-  entry: "./flexbox-flamingos.jsx",
+  entry: "./flexbox_flamingos.jsx",
   output: {
     filename: "./bundle.js"
   },
