@@ -33,7 +33,6 @@ class StageOne extends React.Component {
 
   renderNextStage() {
     if (this.state.css.justifyContent === this.solution.justifyContent) {
-      debugger;
       return(
         <button type="submit">Next stage!</button>
       );

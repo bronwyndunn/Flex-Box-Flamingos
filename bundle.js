@@ -9321,7 +9321,6 @@
 	    key: 'renderNextStage',
 	    value: function renderNextStage() {
 	      if (this.state.css.justifyContent === this.solution.justifyContent) {
-	        debugger;
 	        return _react2.default.createElement(
 	          'button',
 	          { type: 'submit' },
@@ -9512,7 +9511,10 @@
 	    var _this = _possibleConstructorReturn(this, (StageTwo.__proto__ || Object.getPrototypeOf(StageTwo)).call(this, props));
 	
 	    _this.state = {
-	      justifyContent: 'flex-start'
+	      css: {
+	        justifyContent: 'flex-start'
+	      },
+	      winState: 'flamingo-img'
 	    };
 	    _this.solution = { justifyContent: 'center' };
 	    _this.handleSubmit = _this.handleSubmit.bind(_this);
@@ -9524,7 +9526,10 @@
 	    key: 'handleSubmit',
 	    value: function handleSubmit(e) {
 	      e.preventDefault();
-	      _reactRouter.hashHistory.push('/3');
+	      this.setState({ winState: 'bounce' });
+	      setTimeout(function () {
+	        _reactRouter.hashHistory.push('/3');
+	      }, 1000);
 	    }
 	  }, {
 	    key: 'update',
@@ -9532,13 +9537,15 @@
 	      var _this2 = this;
 	
 	      return function (e) {
-	        return _this2.setState(_defineProperty({}, field, e.currentTarget.value));
+	        return _this2.setState({
+	          css: _defineProperty({}, field, e.currentTarget.value)
+	        });
 	      };
 	    }
 	  }, {
 	    key: 'renderNextStage',
 	    value: function renderNextStage() {
-	      if (this.state.justifyContent === this.solution.justifyContent) {
+	      if (this.state.css.justifyContent === this.solution.justifyContent) {
 	        return _react2.default.createElement(
 	          'button',
 	          { type: 'submit' },
@@ -9549,7 +9556,6 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      debugger;
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'game-container' },
@@ -9675,9 +9681,9 @@
 	          { className: 'view' },
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'board', style: this.state },
-	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: 'flamingo-img' }),
-	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: 'flamingo-img' })
+	            { className: 'board', style: this.state.css },
+	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: this.state.winState }),
+	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: this.state.winState })
 	          ),
 	          _react2.default.createElement(
 	            'div',
@@ -27112,7 +27118,10 @@
 	    var _this = _possibleConstructorReturn(this, (StageThree.__proto__ || Object.getPrototypeOf(StageThree)).call(this, props));
 	
 	    _this.state = {
-	      justifyContent: 'flex-start'
+	      css: {
+	        justifyContent: 'flex-start'
+	      },
+	      winState: 'flamingo-img'
 	    };
 	    _this.solution = { justifyContent: 'space-between' };
 	    _this.handleSubmit = _this.handleSubmit.bind(_this);
@@ -27124,7 +27133,10 @@
 	    key: 'handleSubmit',
 	    value: function handleSubmit(e) {
 	      e.preventDefault();
-	      _reactRouter.hashHistory.push('/4');
+	      this.setState({ winState: 'bounce' });
+	      setTimeout(function () {
+	        _reactRouter.hashHistory.push('/4');
+	      }, 1000);
 	    }
 	  }, {
 	    key: 'update',
@@ -27132,13 +27144,15 @@
 	      var _this2 = this;
 	
 	      return function (e) {
-	        return _this2.setState(_defineProperty({}, field, e.currentTarget.value));
+	        return _this2.setState({
+	          css: _defineProperty({}, field, e.currentTarget.value)
+	        });
 	      };
 	    }
 	  }, {
 	    key: 'renderNextStage',
 	    value: function renderNextStage() {
-	      if (this.state.justifyContent === this.solution.justifyContent) {
+	      if (this.state.css.justifyContent === this.solution.justifyContent) {
 	        return _react2.default.createElement(
 	          'button',
 	          { type: 'submit' },
@@ -27274,10 +27288,10 @@
 	          { className: 'view' },
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'board', style: this.state },
-	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: 'flamingo-img' }),
-	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: 'flamingo-img' }),
-	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: 'flamingo-img' })
+	            { className: 'board', style: this.state.css },
+	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: this.state.winState }),
+	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: this.state.winState }),
+	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: this.state.winState })
 	          ),
 	          _react2.default.createElement(
 	            'div',
@@ -27333,7 +27347,10 @@
 	    var _this = _possibleConstructorReturn(this, (StageFour.__proto__ || Object.getPrototypeOf(StageFour)).call(this, props));
 	
 	    _this.state = {
-	      alignItems: 'flex-start'
+	      css: {
+	        alignItems: 'flex-start'
+	      },
+	      winState: 'flamingo-img'
 	    };
 	    _this.solution = { alignItems: 'flex-end' };
 	    _this.handleSubmit = _this.handleSubmit.bind(_this);
@@ -27345,7 +27362,10 @@
 	    key: 'handleSubmit',
 	    value: function handleSubmit(e) {
 	      e.preventDefault();
-	      _reactRouter.hashHistory.push('/5');
+	      this.setState({ winState: 'bounce' });
+	      setTimeout(function () {
+	        _reactRouter.hashHistory.push('/5');
+	      }, 1000);
 	    }
 	  }, {
 	    key: 'update',
@@ -27353,13 +27373,15 @@
 	      var _this2 = this;
 	
 	      return function (e) {
-	        return _this2.setState(_defineProperty({}, field, e.currentTarget.value));
+	        return _this2.setState({
+	          css: _defineProperty({}, field, e.currentTarget.value)
+	        });
 	      };
 	    }
 	  }, {
 	    key: 'renderNextStage',
 	    value: function renderNextStage() {
-	      if (this.state.alignItems === this.solution.alignItems) {
+	      if (this.state.css.alignItems === this.solution.alignItems) {
 	        return _react2.default.createElement(
 	          'button',
 	          { type: 'submit' },
@@ -27485,7 +27507,7 @@
 	                  _react2.default.createElement(
 	                    'code',
 	                    null,
-	                    'align-items:'
+	                    'justify-content:'
 	                  ),
 	                  _react2.default.createElement('input', { type: 'text', onChange: this.update("alignItems"), className: 'user-input' })
 	                ),
@@ -27501,10 +27523,10 @@
 	          { className: 'view' },
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'board', style: this.state },
-	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: 'flamingo-img' }),
-	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: 'flamingo-img' }),
-	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: 'flamingo-img' })
+	            { className: 'board', style: this.state.css },
+	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: this.state.winState }),
+	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: this.state.winState }),
+	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: this.state.winState })
 	          ),
 	          _react2.default.createElement(
 	            'div',
@@ -27560,8 +27582,11 @@
 	    var _this = _possibleConstructorReturn(this, (StageFive.__proto__ || Object.getPrototypeOf(StageFive)).call(this, props));
 	
 	    _this.state = {
-	      justifyContent: 'flex-start',
-	      alignItems: 'flex-start'
+	      css: {
+	        justifyContent: 'flex-start',
+	        alignItems: 'flex-start'
+	      },
+	      winState: 'flamingo-img'
 	    };
 	    _this.solution = {
 	      justifyContent: 'center',
@@ -27576,7 +27601,10 @@
 	    key: 'handleSubmit',
 	    value: function handleSubmit(e) {
 	      e.preventDefault();
-	      _reactRouter.hashHistory.push('/6');
+	      this.setState({ winState: 'bounce' });
+	      setTimeout(function () {
+	        _reactRouter.hashHistory.push('/6');
+	      }, 1000);
 	    }
 	  }, {
 	    key: 'update',
@@ -27590,7 +27618,7 @@
 	  }, {
 	    key: 'renderNextStage',
 	    value: function renderNextStage() {
-	      if (this.state.alignItems === this.solution.alignItems) {
+	      if (this.state.alignItems === this.solution.alignItems && this.state.justifyContent === this.solution.justifyContent) {
 	        return _react2.default.createElement(
 	          'button',
 	          { type: 'submit' },
@@ -27689,7 +27717,7 @@
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'board', style: this.state },
-	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: 'flamingo-img' })
+	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: this.state.winState })
 	          ),
 	          _react2.default.createElement(
 	            'div',
@@ -27743,8 +27771,11 @@
 	    var _this = _possibleConstructorReturn(this, (StageSix.__proto__ || Object.getPrototypeOf(StageSix)).call(this, props));
 	
 	    _this.state = {
-	      justifyContent: 'flex-start',
-	      alignItems: 'flex-start'
+	      css: {
+	        justifyContent: 'flex-start',
+	        alignItems: 'flex-start'
+	      },
+	      winState: 'flamingo-img'
 	    };
 	    _this.solution = {
 	      justifyContent: 'space-around',
@@ -27759,7 +27790,10 @@
 	    key: 'handleSubmit',
 	    value: function handleSubmit(e) {
 	      e.preventDefault();
-	      _reactRouter.hashHistory.push('/7');
+	      this.setState({ winState: 'bounce' });
+	      setTimeout(function () {
+	        _reactRouter.hashHistory.push('/7');
+	      }, 1000);
 	    }
 	  }, {
 	    key: 'update',
@@ -27773,7 +27807,7 @@
 	  }, {
 	    key: 'renderNextStage',
 	    value: function renderNextStage() {
-	      if (this.state.alignItems === this.solution.alignItems) {
+	      if (this.state.alignItems === this.solution.alignItems && this.state.justifyContent === this.solution.justifyContent) {
 	        return _react2.default.createElement(
 	          'button',
 	          { type: 'submit' },
@@ -27872,16 +27906,16 @@
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'board', style: this.state },
-	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: 'flamingo-img' }),
-	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: 'flamingo-img' }),
-	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: 'flamingo-img' })
+	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: this.state.winState }),
+	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: this.state.winState }),
+	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: this.state.winState })
 	          ),
 	          _react2.default.createElement(
 	            'div',
 	            { style: this.solution, className: 'puddle' },
-	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605,w_322/v1485307075/finalpuddle-01_xm6bdf.png', className: 'puddle-img' }),
-	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605,w_322/v1485307075/finalpuddle-01_xm6bdf.png', className: 'puddle-img' }),
-	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605,w_322/v1485307075/finalpuddle-01_xm6bdf.png', className: 'puddle-img' })
+	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_642,w_450/v1485307075/finalpuddle-01_xm6bdf.png', className: 'puddle-img' }),
+	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_642,w_450/v1485307075/finalpuddle-01_xm6bdf.png', className: 'puddle-img' }),
+	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_642,w_450/v1485307075/finalpuddle-01_xm6bdf.png', className: 'puddle-img' })
 	          )
 	        )
 	      );
@@ -27930,8 +27964,10 @@
 	    var _this = _possibleConstructorReturn(this, (StageSeven.__proto__ || Object.getPrototypeOf(StageSeven)).call(this, props));
 	
 	    _this.state = {
-	      flexDirection: 'row',
-	      winState: ''
+	      css: {
+	        flexDirection: 'row'
+	      },
+	      winState: 'flamingo-img'
 	    };
 	    _this.solution = {
 	      flexDirection: 'column'
@@ -27945,7 +27981,10 @@
 	    key: 'handleSubmit',
 	    value: function handleSubmit(e) {
 	      e.preventDefault();
-	      _reactRouter.hashHistory.push('/8');
+	      this.setState({ winState: 'bounce' });
+	      setTimeout(function () {
+	        _reactRouter.hashHistory.push('/8');
+	      }, 1000);
 	    }
 	  }, {
 	    key: 'update',
@@ -27953,13 +27992,15 @@
 	      var _this2 = this;
 	
 	      return function (e) {
-	        return _this2.setState(_defineProperty({}, field, e.currentTarget.value));
+	        return _this2.setState({
+	          css: _defineProperty({}, field, e.currentTarget.value)
+	        });
 	      };
 	    }
 	  }, {
 	    key: 'renderNextStage',
 	    value: function renderNextStage() {
-	      if (this.state.alignItems === this.solution.alignItems) {
+	      if (this.state.css.flexDirection === this.solution.flexDirection) {
 	        return _react2.default.createElement(
 	          'button',
 	          { type: 'submit' },
@@ -28041,10 +28082,10 @@
 	          { className: 'view' },
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'board', style: this.state },
-	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: 'flamingo-img' }),
-	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: 'flamingo-img' }),
-	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: 'flamingo-img' })
+	            { className: 'board', style: this.state.css },
+	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: this.state.winState }),
+	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: this.state.winState }),
+	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: this.state.winState })
 	          ),
 	          _react2.default.createElement(
 	            'div',

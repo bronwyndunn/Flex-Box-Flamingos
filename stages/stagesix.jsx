@@ -5,8 +5,11 @@ class StageSix extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      justifyContent: 'flex-start',
-      alignItems: 'flex-start'
+      css: {
+        justifyContent: 'flex-start',
+        alignItems: 'flex-start'
+      },
+      winState: 'flamingo-img'
     };
     this.solution = {
       justifyContent: 'space-around',
@@ -16,10 +19,14 @@ class StageSix extends React.Component {
     this.update = this.update.bind(this);
   }
 
-  handleSubmit(e) {
-    e.preventDefault();
-     hashHistory.push(`/7`);
-  }
+
+    handleSubmit(e) {
+      e.preventDefault();
+      this.setState({winState: 'bounce'});
+      setTimeout(function(){
+        hashHistory.push(`/7`);
+      }, 1000);
+    }
 
   update(field) {
     return e => this.setState({
@@ -28,7 +35,7 @@ class StageSix extends React.Component {
   }
 
   renderNextStage() {
-    if (this.state.alignItems === this.solution.alignItems) {
+    if ((this.state.alignItems === this.solution.alignItems) && (this.state.justifyContent === this.solution.justifyContent)) {
       return(
         <button type="submit">Next stage!</button>
       );
@@ -72,14 +79,14 @@ class StageSix extends React.Component {
         </form>
           <div className="view">
             <div className="board" style={this.state}>
-              <img src="http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png" className="flamingo-img" />
-              <img src="http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png" className="flamingo-img" />
-              <img src="http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png" className="flamingo-img" />
+              <img src="http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png" className={this.state.winState} />
+              <img src="http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png" className={this.state.winState} />
+              <img src="http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png" className={this.state.winState} />
             </div>
             <div style={this.solution} className="puddle">
-              <img src="http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605,w_322/v1485307075/finalpuddle-01_xm6bdf.png" className="puddle-img" />
-              <img src="http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605,w_322/v1485307075/finalpuddle-01_xm6bdf.png" className="puddle-img" />
-              <img src="http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605,w_322/v1485307075/finalpuddle-01_xm6bdf.png" className="puddle-img" />
+              <img src="http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_642,w_450/v1485307075/finalpuddle-01_xm6bdf.png" className="puddle-img" />
+              <img src="http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_642,w_450/v1485307075/finalpuddle-01_xm6bdf.png" className="puddle-img" />
+              <img src="http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_642,w_450/v1485307075/finalpuddle-01_xm6bdf.png" className="puddle-img" />
           </div>
           </div>
       </div>

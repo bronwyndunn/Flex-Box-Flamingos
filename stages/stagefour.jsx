@@ -5,7 +5,10 @@ class StageFour extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      alignItems: 'flex-start'
+      css: {
+        alignItems: 'flex-start'
+      },
+      winState: 'flamingo-img'
     };
     this.solution = {alignItems: 'flex-end'};
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -14,17 +17,22 @@ class StageFour extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-     hashHistory.push(`/5`);
+    this.setState({winState: 'bounce'});
+    setTimeout(function(){
+      hashHistory.push(`/5`);
+    }, 1000);
   }
 
   update(field) {
     return e => this.setState({
+      css: {
       [field]: e.currentTarget.value
+    }
     });
   }
 
   renderNextStage() {
-    if (this.state.alignItems === this.solution.alignItems) {
+    if (this.state.css.alignItems === this.solution.alignItems) {
       return(
         <button type="submit">Next stage!</button>
       );
@@ -74,7 +82,7 @@ class StageFour extends React.Component {
                   display: flex;
                 </pre>
                 <div>
-                  <code>align-items:</code>
+                  <code>justify-content:</code>
                   <input type="text" onChange={this.update("alignItems")} className="user-input"></input>
                 </div>
                 <br />
@@ -85,11 +93,10 @@ class StageFour extends React.Component {
           </div>
         </form>
           <div className="view">
-            <div className="board" style={this.state}>
-              <img src="http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png" className="flamingo-img" />
-              <img src="http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png" className="flamingo-img" />
-              <img src="http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png" className="flamingo-img" />
-
+            <div className="board" style={this.state.css}>
+              <img src="http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png" className={this.state.winState} />
+              <img src="http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png" className={this.state.winState} />
+              <img src="http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png" className={this.state.winState} />
             </div>
             <div style={this.solution} className="puddle">
               <img src="http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_642,w_450/v1485307075/finalpuddle-01_xm6bdf.png" className="puddle-img" />
