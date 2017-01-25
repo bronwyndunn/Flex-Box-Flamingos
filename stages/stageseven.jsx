@@ -1,20 +1,23 @@
 import React from 'react';
 import { hashHistory } from 'react-router';
 
-class StageTwo extends React.Component {
+class StageSeven extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      justifyContent: 'flex-start'
+      flexDirection: 'row',
+      winState: ''
     };
-    this.solution = {justifyContent: 'center'};
+    this.solution = {
+      flexDirection: 'column',
+    };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
-     hashHistory.push(`/3`);
+     hashHistory.push(`/8`);
   }
 
   update(field) {
@@ -24,7 +27,7 @@ class StageTwo extends React.Component {
   }
 
   renderNextStage() {
-    if (this.state.justifyContent === this.solution.justifyContent) {
+    if (this.state.alignItems === this.solution.alignItems) {
       return(
         <button type="submit">Next stage!</button>
       );
@@ -32,7 +35,6 @@ class StageTwo extends React.Component {
   }
 
   render() {
-    debugger;
     return(
       <div className="game-container">
         <form className="game-form" onSubmit={this.handleSubmit}>
@@ -40,32 +42,10 @@ class StageTwo extends React.Component {
             <h1>Flexbox Flamingo</h1>
             <div className="instructions">
               <p>Welcome to Flexbox Flamingo! Guide the flamingos to their puddles by writing CSS code. Use
-                <code> justify-content </code>
+                <code> flex-direction </code>
                  to move the flamingo to her puddle.
-                 <code> justify-content </code> defines how items are aligned along the horizontal axis.
+                 <code>flex-direction </code> establishes the main axis, and therefore defining the direction the items are placed.
               </p>
-              <ul className="flex-options">
-                <li>
-                  <code>flex-start: </code>
-                  Items are packed at the start of the line.
-                </li>
-                <li>
-                  <code>flex-end: </code>
-                  Items are packed at the end of the line.
-                </li>
-                <li>
-                  <code>center: </code>
-                  Items are centered along the line.
-                </li>
-                <li>
-                  <code>space-between: </code>
-                  First item is on the start of the line, last item is on the end of the line. Other items are evenly distibuted between.
-                </li>
-                <li>
-                  <code>space-around: </code>
-                  Items are eventually distributed along the line.
-                </li>
-              </ul>
             </div>
             <div className="code-area-container">
               <div className="code-area">
@@ -73,9 +53,9 @@ class StageTwo extends React.Component {
                   <br />
                   display: flex;
                 </pre>
-                <div>
+                <div className="first-user-input">
                   <code>justify-content:</code>
-                  <input type="text" onChange={this.update("justifyContent")} className="user-input"></input>
+                  <input type="text" onChange={this.update("flexDirection")} className="user-input"></input>
                 </div>
                 <br />
                 {'}'}
@@ -88,8 +68,10 @@ class StageTwo extends React.Component {
             <div className="board" style={this.state}>
               <img src="http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png" className="flamingo-img" />
               <img src="http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png" className="flamingo-img" />
+              <img src="http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png" className="flamingo-img" />
             </div>
-            <div style={this.solution} className="puddle">
+            <div style={this.solution} className="puddle-7">
+              <img src="http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_642,w_450/v1485307075/finalpuddle-01_xm6bdf.png" className="puddle-img" />
               <img src="http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_642,w_450/v1485307075/finalpuddle-01_xm6bdf.png" className="puddle-img" />
               <img src="http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_642,w_450/v1485307075/finalpuddle-01_xm6bdf.png" className="puddle-img" />
           </div>
@@ -99,4 +81,4 @@ class StageTwo extends React.Component {
   }
 }
 
-export default StageTwo;
+export default StageSeven;

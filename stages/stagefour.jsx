@@ -1,39 +1,30 @@
 import React from 'react';
 import { hashHistory } from 'react-router';
 
-class StageOne extends React.Component {
+class StageFour extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      css: {
-        justifyContent: 'flex-start'
-      },
-      winState: 'flamingo-img'
+      alignItems: 'flex-start'
     };
-    this.solution = {justifyContent: 'flex-end'};
+    this.solution = {alignItems: 'flex-end'};
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    this.setState({winState: 'bounce'});
-    setTimeout(function(){
-      hashHistory.push(`/2`);
-    }, 1000);
+     hashHistory.push(`/5`);
   }
 
   update(field) {
     return e => this.setState({
-      css: {
       [field]: e.currentTarget.value
-    }
     });
   }
 
   renderNextStage() {
-    if (this.state.css.justifyContent === this.solution.justifyContent) {
-      debugger;
+    if (this.state.alignItems === this.solution.alignItems) {
       return(
         <button type="submit">Next stage!</button>
       );
@@ -48,9 +39,10 @@ class StageOne extends React.Component {
             <h1>Flexbox Flamingo</h1>
             <div className="instructions">
               <p>Welcome to Flexbox Flamingo! Guide the flamingos to their puddles by writing CSS code. Use
-                <code> justify-content </code>
+                <code> align-items </code>
                  to move the flamingo to her puddle.
-                 <code> justify-content </code> defines how items are aligned along the horizontal axis.
+                 <code> align-items </code> is like
+                   <code> justify-content</code>, but in the perpendicular direction.
               </p>
               <ul className="flex-options">
                 <li>
@@ -82,8 +74,8 @@ class StageOne extends React.Component {
                   display: flex;
                 </pre>
                 <div>
-                  <code>justify-content:</code>
-                  <input type="text" onChange={this.update("justifyContent")} className="user-input"></input>
+                  <code>align-items:</code>
+                  <input type="text" onChange={this.update("alignItems")} className="user-input"></input>
                 </div>
                 <br />
                 {'}'}
@@ -93,10 +85,15 @@ class StageOne extends React.Component {
           </div>
         </form>
           <div className="view">
-            <div className="board" style={this.state.css}>
-              <img src="http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,w_120/v1485306871/flamingo_nf6sft.png" className={this.state.winState} />
+            <div className="board" style={this.state}>
+              <img src="http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png" className="flamingo-img" />
+              <img src="http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png" className="flamingo-img" />
+              <img src="http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png" className="flamingo-img" />
+
             </div>
             <div style={this.solution} className="puddle">
+              <img src="http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_642,w_450/v1485307075/finalpuddle-01_xm6bdf.png" className="puddle-img" />
+              <img src="http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_642,w_450/v1485307075/finalpuddle-01_xm6bdf.png" className="puddle-img" />
               <img src="http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_642,w_450/v1485307075/finalpuddle-01_xm6bdf.png" className="puddle-img" />
           </div>
           </div>
@@ -105,4 +102,4 @@ class StageOne extends React.Component {
   }
 }
 
-export default StageOne;
+export default StageFour;

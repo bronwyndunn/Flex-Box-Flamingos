@@ -42,29 +42,65 @@ li {
 
 .board {
   display: flex;
-  min-height: 800px;
+  min-height: 700px;
   position: absolute;
   width: 100%;
 }
 
 .puddle {
-  min-height: 800px;
+  min-height: 700px;
   display: flex;
   position: absolute;
-  width: 100%
+  width: 100%;
+}
+
+.puddle-7 {
+  min-height: 700px;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  padding-top: 10px;
 }
 
 
 .flamingo-img {
-  height: 200px;
-  width: auto;
-  margin: 15px;
+  height: 150px;
+  width: 17%;
+  z-index: 10;
+}
+
+.bounce {
+  height: 150px;
+  width: 17%;
   z-index: 10;
 }
 
 .puddle-img {
-  height: 220px;
-  width: auto;
-  margin: 15px;
+  height: 150px;
+  width: 17%;
   z-index: 8;
+}
+.bounce {
+  height: 150px;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}
+  40% {-webkit-transform: translateY(-30px);}
+  60% {-webkit-transform: translateY(-15px);}
+}
+
+@keyframes bounce {
+   0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+   40% {transform: translateY(-30px);}
+   60% {transform: translateY(-15px);}
+}
+
+.bounce {
+   -webkit-animation-name: bounce;
+   animation-name: bounce;
 }
