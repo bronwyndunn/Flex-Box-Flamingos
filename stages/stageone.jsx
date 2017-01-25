@@ -1,4 +1,5 @@
 import React from 'react';
+import { hashHistory } from 'react-router';
 
 class StageOne extends React.Component {
   constructor(props) {
@@ -13,12 +14,21 @@ class StageOne extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+     hashHistory.push(`/2`);
   }
 
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
     });
+  }
+
+  renderNextStage() {
+    if (this.state.justifyContent === this.solution.justifyContent) {
+      return(
+        <button type="submit">Next stage!</button>
+      );
+    }
   }
 
   render() {
@@ -57,22 +67,29 @@ class StageOne extends React.Component {
             </div>
             <div className="code-area-container">
               <div className="code-area">
-                <pre>land
+                <pre>land {'{'}
+                  <br />
                   display: flex;
                 </pre>
-                <input type="text" onChange={this.update("justifyContent")} className="user-input"></input>
+                <div>
+                  <code>justify-content:</code>
+                  <input type="text" onChange={this.update("justifyContent")} className="user-input"></input>
+                </div>
+                <br />
+                {'}'}
               </div>
             </div>
-          </div>
-          <div className="view">
-            <div className="board" style={this.state}>
-              <img src="http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_942/v1485237910/flamingo_ht7lw6.png" className="flamingo-img" />
-            </div>
-            <div style={this.solution}>
-              <img src="http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_942/v1485237910/flamingo_ht7lw6.png" className="flamingo-img" />
-          </div>
+            {this.renderNextStage()}
           </div>
         </form>
+          <div className="view">
+            <div className="board" style={this.state}>
+              <img src="http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png" className="flamingo-img" />
+            </div>
+            <div style={this.solution} className="puddle">
+              <img src="http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_642,w_450/v1485307075/finalpuddle-01_xm6bdf.png" className="puddle-img" />
+          </div>
+          </div>
       </div>
     );
   }

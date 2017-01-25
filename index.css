@@ -1,6 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Overpass:300,400');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
+.sidebar h1 {
+  font-family: 'Overpass', sans-serif;
+  font-weight: 300;
+  font-size: 45px;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: row;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+li {
+  list-style: none;
+}
+
 .game-form {
   display: flex;
   flex-direction: row;
+  width: 50%;
+  padding-right: 20px;
 }
 
 .board {
@@ -9,29 +32,39 @@
   background-size: cover;
 }
 
-.sidebar {
-  width: 50%;
-}
 
 .view {
   width: 50%;
   display: flex;
+  position: relative;
+  padding-left: 20px;
 }
 
 .board {
   display: flex;
   min-height: 800px;
-  position: relative;
+  position: absolute;
   width: 100%;
 }
 
 .puddle {
+  min-height: 800px;
   display: flex;
+  position: absolute;
+  width: 100%
 }
 
 
 .flamingo-img {
-  height: 120px;
+  height: 200px;
   width: auto;
   margin: 15px;
+  z-index: 10;
+}
+
+.puddle-img {
+  height: 220px;
+  width: auto;
+  margin: 15px;
+  z-index: 8;
 }

@@ -4143,6 +4143,10 @@
 	
 	var _stageone2 = _interopRequireDefault(_stageone);
 	
+	var _stagetwo = __webpack_require__(236);
+	
+	var _stagetwo2 = _interopRequireDefault(_stagetwo);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var Root = function Root() {
@@ -4153,7 +4157,8 @@
 	      _reactRouter.Route,
 	      { path: '/', component: _app2.default },
 	      _react2.default.createElement(_reactRouter.IndexRoute, { component: _stageone2.default }),
-	      _react2.default.createElement(_reactRouter.Route, { path: '/1', component: _stageone2.default })
+	      _react2.default.createElement(_reactRouter.Route, { path: '/1', component: _stageone2.default }),
+	      _react2.default.createElement(_reactRouter.Route, { path: '/2', component: _stagetwo2.default })
 	    )
 	  );
 	};
@@ -9235,6 +9240,8 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _reactRouter = __webpack_require__(33);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -9266,6 +9273,7 @@
 	    key: 'handleSubmit',
 	    value: function handleSubmit(e) {
 	      e.preventDefault();
+	      _reactRouter.hashHistory.push('/2');
 	    }
 	  }, {
 	    key: 'update',
@@ -9275,6 +9283,17 @@
 	      return function (e) {
 	        return _this2.setState(_defineProperty({}, field, e.currentTarget.value));
 	      };
+	    }
+	  }, {
+	    key: 'renderNextStage',
+	    value: function renderNextStage() {
+	      if (this.state.justifyContent === this.solution.justifyContent) {
+	        return _react2.default.createElement(
+	          'button',
+	          { type: 'submit' },
+	          'Next stage!'
+	        );
+	      }
 	    }
 	  }, {
 	    key: 'render',
@@ -9371,25 +9390,40 @@
 	                _react2.default.createElement(
 	                  'pre',
 	                  null,
-	                  'land display: flex;'
+	                  'land ',
+	                  '{',
+	                  _react2.default.createElement('br', null),
+	                  'display: flex;'
 	                ),
-	                _react2.default.createElement('input', { type: 'text', onChange: this.update("justifyContent"), className: 'user-input' })
+	                _react2.default.createElement(
+	                  'div',
+	                  null,
+	                  _react2.default.createElement(
+	                    'code',
+	                    null,
+	                    'justify-content:'
+	                  ),
+	                  _react2.default.createElement('input', { type: 'text', onChange: this.update("justifyContent"), className: 'user-input' })
+	                ),
+	                _react2.default.createElement('br', null),
+	                '}'
 	              )
-	            )
+	            ),
+	            this.renderNextStage()
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'view' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'board', style: this.state },
+	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: 'flamingo-img' })
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'view' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'board', style: this.state },
-	              _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_942/v1485237910/flamingo_ht7lw6.png', className: 'flamingo-img' })
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { style: this.solution },
-	              _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_942/v1485237910/flamingo_ht7lw6.png', className: 'flamingo-img' })
-	            )
+	            { style: this.solution, className: 'puddle' },
+	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_642,w_450/v1485307075/finalpuddle-01_xm6bdf.png', className: 'puddle-img' })
 	          )
 	        )
 	      );
@@ -26780,6 +26814,20 @@
 	
 	module.exports = ReactDOMInvalidARIAHook;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
+
+/***/ },
+/* 236 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactRouter = __webpack_require__(33);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }
 /******/ ]);
