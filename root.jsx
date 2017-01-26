@@ -8,6 +8,9 @@ import StageFour from './stages/stagefour';
 import StageFive from './stages/stagefive';
 import StageSix from './stages/stagesix';
 import StageSeven from './stages/stageseven';
+import StageEight from './stages/stageeight';
+import StageNine from './stages/stagenine';
+import StageTen from './stages/stageten';
 
 const Root = () => {
   return (
@@ -21,6 +24,9 @@ const Root = () => {
         <Route path="/5" component={StageFive} />
         <Route path="/6" component={StageSix} />
         <Route path="/7" component={StageSeven} />
+        <Route path="/8" component={StageEight} />
+        <Route path="/9" component={StageNine} />
+        <Route path="/10" component={StageTen} />
       </Route>
     </Router>
   );

@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Overpass:300,400');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
 
 
 .sidebar h1 {
@@ -103,4 +105,66 @@ li {
 .bounce {
    -webkit-animation-name: bounce;
    animation-name: bounce;
+}
+
+.code-area {
+  background-color: #ebebeb;
+}
+
+
+input[type="text"] {
+  outline: none;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background: #fff;
+  margin-bottom: 4%;
+  border-style: none;
+  font-family: 'Inconsolata', monospace;
+  font-size: 18px;
+}
+
+code, pre {
+  font-family: 'Inconsolata', monospace;
+  font-size: 18px;
+}
+
+pre {
+  margin-bottom: 0px;
+}
+
+.code-area {
+  font-family: 'Inconsolata', monospace;
+  font-size: 18px;
+  color: grey;
+  line-height: 1.5;
+}
+
+.user-input-text {
+  color: black;
+}
+
+.indented-code {
+  margin-left: 16px;
+}
+
+button{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 2%;
+  background: #E8095D;
+  border-bottom: 2px solid #D60856;
+  border-top-style: none;
+  border-right-style: none;
+  border-left-style: none;
+  color: #fff;
+  position: relative;
+  bottom: 63px;
+  left: 80%;
+  font-size: 13px;
+}
+
+button:hover {
+  background: #D60856;
 }

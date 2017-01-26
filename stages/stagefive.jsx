@@ -20,13 +20,19 @@ class StageFive extends React.Component {
   }
 
 
-    handleSubmit(e) {
-      e.preventDefault();
+  handleSubmit(e) {
+    e.preventDefault();
+    if ((this.state.alignItems === this.solution.alignItems) && (this.state.justifyContent === this.solution.justifyContent)) {
       this.setState({winState: 'bounce'});
       setTimeout(function(){
         hashHistory.push(`/6`);
       }, 1000);
     }
+    else {
+      alert("nope");
+    }
+  }
+
 
   update(field) {
     return e => this.setState({
@@ -49,12 +55,9 @@ class StageFive extends React.Component {
           <div className="sidebar">
             <h1>Flexbox Flamingo</h1>
             <div className="instructions">
-              <p>Welcome to Flexbox Flamingo! Guide the flamingos to their puddles by writing CSS code. Use
-                <code> align-items </code>
-                 to move the flamingo to her puddle. Use and combination of
+                 Use and combination of
                  <code> align-items </code> and
-                   <code> justify-content</code>.
-              </p>
+                   <code> justify-content</code> to move the flamingo to her puddle.
             </div>
             <div className="code-area-container">
               <div className="code-area">

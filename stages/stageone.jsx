@@ -17,10 +17,12 @@ class StageOne extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.setState({winState: 'bounce'});
-    setTimeout(function(){
-      hashHistory.push(`/2`);
-    }, 1000);
+    if (this.state.css.justifyContent === this.solution.justifyContent) {
+      this.setState({winState: 'bounce'});
+      setTimeout(function(){
+        hashHistory.push(`/2`);
+      }, 1000);
+    }
   }
 
   update(field) {
@@ -34,7 +36,7 @@ class StageOne extends React.Component {
   renderNextStage() {
     if (this.state.css.justifyContent === this.solution.justifyContent) {
       return(
-        <button type="submit">Next stage!</button>
+        <button type="submit" onClick={this.handleSubmit}>Next stage!</button>
       );
     }
   }
@@ -76,13 +78,14 @@ class StageOne extends React.Component {
             </div>
             <div className="code-area-container">
               <div className="code-area">
-                <pre>land {'{'}
+                #land {'{'}
                   <br />
+                  <div className="indented-code">
                   display: flex;
-                </pre>
-                <div>
-                  <code>justify-content:</code>
-                  <input type="text" onChange={this.update("justifyContent")} className="user-input"></input>
+                  <div className="user-input-text">
+                    <code>justify-content:</code>
+                    <input type="text" onChange={this.update("justifyContent")} className="user-input"></input>
+                  </div>
                 </div>
                 <br />
                 {'}'}

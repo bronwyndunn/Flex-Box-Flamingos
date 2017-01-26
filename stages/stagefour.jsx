@@ -17,10 +17,12 @@ class StageFour extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.setState({winState: 'bounce'});
-    setTimeout(function(){
-      hashHistory.push(`/5`);
-    }, 1000);
+    if (this.state.css.alignItems === this.solution.alignItems) {
+      this.setState({winState: 'bounce'});
+      setTimeout(function(){
+        hashHistory.push(`/5`);
+      }, 1000);
+    }
   }
 
   update(field) {
@@ -46,12 +48,11 @@ class StageFour extends React.Component {
           <div className="sidebar">
             <h1>Flexbox Flamingo</h1>
             <div className="instructions">
-              <p>Welcome to Flexbox Flamingo! Guide the flamingos to their puddles by writing CSS code. Use
+              Now use
                 <code> align-items </code>
                  to move the flamingo to her puddle.
                  <code> align-items </code> is like
                    <code> justify-content</code>, but in the perpendicular direction.
-              </p>
               <ul className="flex-options">
                 <li>
                   <code>flex-start: </code>
@@ -82,7 +83,7 @@ class StageFour extends React.Component {
                   display: flex;
                 </pre>
                 <div>
-                  <code>justify-content:</code>
+                  <code>align-items:</code>
                   <input type="text" onChange={this.update("alignItems")} className="user-input"></input>
                 </div>
                 <br />
