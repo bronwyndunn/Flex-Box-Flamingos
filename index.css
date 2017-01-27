@@ -66,9 +66,12 @@ li {
 
 
 .flamingo-img {
-  height: 150px;
-  width: 17%;
+  height: 145px;
+  width: 115px;
   z-index: 10;
+  animation-name: grow;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
 
 .bounce {
@@ -167,4 +170,19 @@ button{
 
 button:hover {
   background: #D60856;
+}
+
+@keyframes grow {
+  0% {width: 115px;
+        height: 145px;}
+  50% {width: 123px;
+      height: 155px;}
+  100% {width: 115px;
+        height: 145px;}
+}
+
+input[type="text"] {
+  position: absolute;
+  left: 14%;
+  margin-top: 3px;
 }

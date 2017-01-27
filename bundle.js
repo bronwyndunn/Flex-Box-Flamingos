@@ -10132,23 +10132,23 @@
 	              _react2.default.createElement(
 	                'div',
 	                { className: 'code-area' },
-	                _react2.default.createElement(
-	                  'pre',
-	                  null,
-	                  'land ',
-	                  '{',
-	                  _react2.default.createElement('br', null),
-	                  'display: flex;'
-	                ),
+	                '#land ',
+	                '{',
+	                _react2.default.createElement('br', null),
 	                _react2.default.createElement(
 	                  'div',
-	                  null,
+	                  { className: 'indented-code' },
+	                  'display: flex;',
 	                  _react2.default.createElement(
-	                    'code',
-	                    null,
-	                    'align-items:'
-	                  ),
-	                  _react2.default.createElement('input', { type: 'text', onChange: this.update("alignItems"), className: 'user-input' })
+	                    'div',
+	                    { className: 'user-input-text' },
+	                    _react2.default.createElement(
+	                      'code',
+	                      null,
+	                      'justify-content:'
+	                    ),
+	                    _react2.default.createElement('input', { type: 'text', onChange: this.update("alignItems"), className: 'user-input' })
+	                  )
 	                ),
 	                _react2.default.createElement('br', null),
 	                '}'
@@ -10245,8 +10245,6 @@
 	        setTimeout(function () {
 	          _reactRouter.hashHistory.push('/6');
 	        }, 1000);
-	      } else {
-	        alert("nope");
 	      }
 	    }
 	  }, {
@@ -10309,36 +10307,40 @@
 	              _react2.default.createElement(
 	                'div',
 	                { className: 'code-area' },
-	                _react2.default.createElement(
-	                  'pre',
-	                  null,
-	                  'land ',
-	                  '{',
-	                  _react2.default.createElement('br', null),
-	                  'display: flex;'
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'first-user-input' },
-	                  _react2.default.createElement(
-	                    'code',
-	                    null,
-	                    'justify-content:'
-	                  ),
-	                  _react2.default.createElement('input', { type: 'text', onChange: this.update("justifyContent"), className: 'user-input' })
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'second-user-input' },
-	                  _react2.default.createElement(
-	                    'code',
-	                    null,
-	                    'align-items:'
-	                  ),
-	                  _react2.default.createElement('input', { type: 'text', onChange: this.update("alignItems"), className: 'user-input' })
-	                ),
+	                'land ',
+	                '{',
 	                _react2.default.createElement('br', null),
-	                '}'
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'indented-code' },
+	                  'display: flex;',
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'user-input-text' },
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'first-user-input' },
+	                      _react2.default.createElement(
+	                        'code',
+	                        null,
+	                        'justify-content:'
+	                      ),
+	                      _react2.default.createElement('input', { type: 'text', onChange: this.update("justifyContent"), className: 'user-input' })
+	                    ),
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'second-user-input' },
+	                      _react2.default.createElement(
+	                        'code',
+	                        null,
+	                        'align-items:'
+	                      ),
+	                      _react2.default.createElement('input', { type: 'text', onChange: this.update("alignItems"), className: 'user-input' })
+	                    )
+	                  ),
+	                  _react2.default.createElement('br', null),
+	                  '}'
+	                )
 	              )
 	            ),
 	            this.renderNextStage()
@@ -10471,13 +10473,7 @@
 	              _react2.default.createElement(
 	                'p',
 	                null,
-	                'Welcome to Flexbox Flamingo! Guide the flamingos to their puddles by writing CSS code. Use',
-	                _react2.default.createElement(
-	                  'code',
-	                  null,
-	                  ' align-items '
-	                ),
-	                'to move the flamingo to her puddle. Use and combination of',
+	                'Use and combination of',
 	                _react2.default.createElement(
 	                  'code',
 	                  null,
@@ -10489,7 +10485,7 @@
 	                  null,
 	                  ' justify-content'
 	                ),
-	                '.'
+	                'to get the flamingos to their puddles.'
 	              )
 	            ),
 	            _react2.default.createElement(
@@ -10498,36 +10494,40 @@
 	              _react2.default.createElement(
 	                'div',
 	                { className: 'code-area' },
-	                _react2.default.createElement(
-	                  'pre',
-	                  null,
-	                  'land ',
-	                  '{',
-	                  _react2.default.createElement('br', null),
-	                  'display: flex;'
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'first-user-input' },
-	                  _react2.default.createElement(
-	                    'code',
-	                    null,
-	                    'justify-content:'
-	                  ),
-	                  _react2.default.createElement('input', { type: 'text', onChange: this.update("justifyContent"), className: 'user-input' })
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'second-user-input' },
-	                  _react2.default.createElement(
-	                    'code',
-	                    null,
-	                    'align-items:'
-	                  ),
-	                  _react2.default.createElement('input', { type: 'text', onChange: this.update("alignItems"), className: 'user-input' })
-	                ),
+	                'land ',
+	                '{',
 	                _react2.default.createElement('br', null),
-	                '}'
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'indented-code' },
+	                  'display: flex;',
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'user-input-text' },
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'first-user-input' },
+	                      _react2.default.createElement(
+	                        'code',
+	                        null,
+	                        'justify-content:'
+	                      ),
+	                      _react2.default.createElement('input', { type: 'text', onChange: this.update("justifyContent"), className: 'user-input' })
+	                    ),
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'second-user-input' },
+	                      _react2.default.createElement(
+	                        'code',
+	                        null,
+	                        'align-items:'
+	                      ),
+	                      _react2.default.createElement('input', { type: 'text', onChange: this.update("alignItems"), className: 'user-input' })
+	                    )
+	                  ),
+	                  _react2.default.createElement('br', null),
+	                  '}'
+	                )
 	              )
 	            ),
 	            this.renderNextStage()
@@ -10614,10 +10614,12 @@
 	    key: 'handleSubmit',
 	    value: function handleSubmit(e) {
 	      e.preventDefault();
-	      this.setState({ winState: 'bounce' });
-	      setTimeout(function () {
-	        _reactRouter.hashHistory.push('/8');
-	      }, 1000);
+	      if (this.state.css.flexDirection === this.solution.flexDirection) {
+	        this.setState({ winState: 'bounce' });
+	        setTimeout(function () {
+	          _reactRouter.hashHistory.push('/8');
+	        }, 1000);
+	      }
 	    }
 	  }, {
 	    key: 'update',
@@ -10664,7 +10666,7 @@
 	              _react2.default.createElement(
 	                'p',
 	                null,
-	                'Welcome to Flexbox Flamingo! Guide the flamingos to their puddles by writing CSS code. Use',
+	                ' Now use',
 	                _react2.default.createElement(
 	                  'code',
 	                  null,
@@ -10674,9 +10676,53 @@
 	                _react2.default.createElement(
 	                  'code',
 	                  null,
-	                  'flex-direction '
+	                  ' flex-direction '
 	                ),
 	                ' establishes the main axis, and therefore defining the direction the items are placed.'
+	              ),
+	              _react2.default.createElement(
+	                'ul',
+	                { className: 'flex-options' },
+	                _react2.default.createElement(
+	                  'li',
+	                  null,
+	                  _react2.default.createElement(
+	                    'code',
+	                    null,
+	                    'row: '
+	                  ),
+	                  'Items are placed along the horizontal axis.'
+	                ),
+	                _react2.default.createElement(
+	                  'li',
+	                  null,
+	                  _react2.default.createElement(
+	                    'code',
+	                    null,
+	                    'row-reverse: '
+	                  ),
+	                  'Items are placed along the horizontal axis but in the opposite direction.'
+	                ),
+	                _react2.default.createElement(
+	                  'li',
+	                  null,
+	                  _react2.default.createElement(
+	                    'code',
+	                    null,
+	                    'column: '
+	                  ),
+	                  'Items are placed along the vertical axis.'
+	                ),
+	                _react2.default.createElement(
+	                  'li',
+	                  null,
+	                  _react2.default.createElement(
+	                    'code',
+	                    null,
+	                    'column-reverse: '
+	                  ),
+	                  'Items are placed along the vertical axis but in the opposite direction.'
+	                )
 	              )
 	            ),
 	            _react2.default.createElement(
@@ -10685,26 +10731,30 @@
 	              _react2.default.createElement(
 	                'div',
 	                { className: 'code-area' },
-	                _react2.default.createElement(
-	                  'pre',
-	                  null,
-	                  'land ',
-	                  '{',
-	                  _react2.default.createElement('br', null),
-	                  'display: flex;'
-	                ),
+	                'land ',
+	                '{',
+	                _react2.default.createElement('br', null),
 	                _react2.default.createElement(
 	                  'div',
-	                  { className: 'first-user-input' },
+	                  { className: 'indented-code' },
+	                  'display: flex;',
 	                  _react2.default.createElement(
-	                    'code',
-	                    null,
-	                    'justify-content:'
+	                    'div',
+	                    { className: 'user-input-text' },
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'first-user-input' },
+	                      _react2.default.createElement(
+	                        'code',
+	                        null,
+	                        'flex-direction:'
+	                      ),
+	                      _react2.default.createElement('input', { type: 'text', onChange: this.update("flexDirection"), className: 'user-input' })
+	                    )
 	                  ),
-	                  _react2.default.createElement('input', { type: 'text', onChange: this.update("flexDirection"), className: 'user-input' })
-	                ),
-	                _react2.default.createElement('br', null),
-	                '}'
+	                  _react2.default.createElement('br', null),
+	                  '}'
+	                )
 	              )
 	            ),
 	            this.renderNextStage()
@@ -10812,7 +10862,7 @@
 	  }, {
 	    key: 'renderNextStage',
 	    value: function renderNextStage() {
-	      if (this.state.alignItems === this.solution.alignItems && this.state.justifyContent === this.solution.justifyContent) {
+	      if (this.state.alignItems === this.solution.alignItems && this.state.justifyContent === this.solution.justifyContent && this.state.flexDirection === this.solution.flexDirection) {
 	        return _react2.default.createElement(
 	          'button',
 	          { type: 'submit' },
@@ -10843,25 +10893,24 @@
 	              _react2.default.createElement(
 	                'p',
 	                null,
-	                'Welcome to Flexbox Flamingo! Guide the flamingos to their puddles by writing CSS code. Use',
+	                ' Use a combination of',
 	                _react2.default.createElement(
 	                  'code',
 	                  null,
-	                  ' align-items '
+	                  ' align-items, '
 	                ),
-	                'to move the flamingo to her puddle. Use and combination of',
 	                _react2.default.createElement(
 	                  'code',
 	                  null,
-	                  ' align-items '
+	                  'justify-content, '
 	                ),
 	                ' and',
 	                _react2.default.createElement(
 	                  'code',
 	                  null,
-	                  ' justify-content'
+	                  ' flex-direction '
 	                ),
-	                '.'
+	                'to get the flamingos to their puddles.'
 	              )
 	            ),
 	            _react2.default.createElement(
@@ -10870,43 +10919,47 @@
 	              _react2.default.createElement(
 	                'div',
 	                { className: 'code-area' },
-	                _react2.default.createElement(
-	                  'pre',
-	                  null,
-	                  'land ',
-	                  '{',
-	                  _react2.default.createElement('br', null),
-	                  'display: flex;'
-	                ),
+	                'land ',
+	                '{',
+	                _react2.default.createElement('br', null),
 	                _react2.default.createElement(
 	                  'div',
-	                  { className: 'first-user-input' },
+	                  { className: 'indented-code' },
+	                  'display: flex;',
 	                  _react2.default.createElement(
-	                    'code',
-	                    null,
-	                    'justify-content:'
-	                  ),
-	                  _react2.default.createElement('input', { type: 'text', onChange: this.update("justifyContent"), className: 'user-input' })
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'second-user-input' },
-	                  _react2.default.createElement(
-	                    'code',
-	                    null,
-	                    'align-items:'
-	                  ),
-	                  _react2.default.createElement('input', { type: 'text', onChange: this.update("alignItems"), className: 'user-input' })
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'third-user-input' },
-	                  _react2.default.createElement(
-	                    'code',
-	                    null,
-	                    'flex-direction:'
-	                  ),
-	                  _react2.default.createElement('input', { type: 'text', onChange: this.update("flexDirection"), className: 'user-input' })
+	                    'div',
+	                    { className: 'user-input-text' },
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'first-user-input' },
+	                      _react2.default.createElement(
+	                        'code',
+	                        null,
+	                        'justify-content:'
+	                      ),
+	                      _react2.default.createElement('input', { type: 'text', onChange: this.update("justifyContent"), className: 'user-input' })
+	                    ),
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'second-user-input' },
+	                      _react2.default.createElement(
+	                        'code',
+	                        null,
+	                        'align-items:'
+	                      ),
+	                      _react2.default.createElement('input', { type: 'text', onChange: this.update("alignItems"), className: 'user-input' })
+	                    ),
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'third-user-input' },
+	                      _react2.default.createElement(
+	                        'code',
+	                        null,
+	                        'flex-direction:'
+	                      ),
+	                      _react2.default.createElement('input', { type: 'text', onChange: this.update("flexDirection"), className: 'user-input' })
+	                    )
+	                  )
 	                ),
 	                _react2.default.createElement('br', null),
 	                '}'
@@ -10980,11 +11033,15 @@
 	
 	    _this.state = {
 	      css: {
-	        flexWrap: 'no-wrap'
+	        alignItems: 'flex-start',
+	        flexDirection: 'row'
 	      },
 	      winState: 'flamingo-img'
 	    };
-	    _this.solution = { flexWrap: 'wrap' };
+	    _this.solution = {
+	      alignItems: 'flex-end',
+	      flexDirection: 'column-reverse'
+	    };
 	    _this.handleSubmit = _this.handleSubmit.bind(_this);
 	    _this.update = _this.update.bind(_this);
 	    return _this;
@@ -10998,6 +11055,193 @@
 	      setTimeout(function () {
 	        _reactRouter.hashHistory.push('/10');
 	      }, 1000);
+	    }
+	  }, {
+	    key: 'update',
+	    value: function update(field) {
+	      var _this2 = this;
+	
+	      return function (e) {
+	        return _this2.setState(_defineProperty({}, field, e.currentTarget.value));
+	      };
+	    }
+	  }, {
+	    key: 'renderNextStage',
+	    value: function renderNextStage() {
+	      if (this.state.alignItems === this.solution.alignItems && this.state.flexDirection === this.solution.flexDirection) {
+	        return _react2.default.createElement(
+	          'button',
+	          { type: 'submit' },
+	          'Next stage!'
+	        );
+	      }
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'game-container' },
+	        _react2.default.createElement(
+	          'form',
+	          { className: 'game-form', onSubmit: this.handleSubmit },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'sidebar' },
+	            _react2.default.createElement(
+	              'h1',
+	              null,
+	              'Flexbox Flamingo'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'instructions' },
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                ' Use a combination of',
+	                _react2.default.createElement(
+	                  'code',
+	                  null,
+	                  ' align-items '
+	                ),
+	                'and',
+	                _react2.default.createElement(
+	                  'code',
+	                  null,
+	                  ' flex-direction '
+	                ),
+	                ' to get the flamingos their puddles.'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'code-area-container' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'code-area' },
+	                'land ',
+	                '{',
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'indented-code' },
+	                  'display: flex;',
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'user-input-text' },
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'first-user-input' },
+	                      _react2.default.createElement(
+	                        'code',
+	                        null,
+	                        'align-items:'
+	                      ),
+	                      _react2.default.createElement('input', { type: 'text', onChange: this.update("alignItems"), className: 'user-input' })
+	                    ),
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'second-user-input' },
+	                      _react2.default.createElement(
+	                        'code',
+	                        null,
+	                        'flex-direction:'
+	                      ),
+	                      _react2.default.createElement('input', { type: 'text', onChange: this.update("flexDirection"), className: 'user-input' })
+	                    )
+	                  )
+	                ),
+	                _react2.default.createElement('br', null),
+	                '}'
+	              )
+	            ),
+	            this.renderNextStage()
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'view' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'board', style: this.state },
+	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: this.state.winState }),
+	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: this.state.winState }),
+	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: this.state.winState })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { style: this.solution, className: 'puddle' },
+	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_642,w_450/v1485307075/finalpuddle-01_xm6bdf.png', className: 'puddle-img' }),
+	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_642,w_450/v1485307075/finalpuddle-01_xm6bdf.png', className: 'puddle-img' }),
+	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_642,w_450/v1485307075/finalpuddle-01_xm6bdf.png', className: 'puddle-img' })
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return StageNine;
+	}(_react2.default.Component);
+	
+	exports.default = StageNine;
+
+/***/ },
+/* 98 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactRouter = __webpack_require__(33);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var StageTen = function (_React$Component) {
+	  _inherits(StageTen, _React$Component);
+	
+	  function StageTen(props) {
+	    _classCallCheck(this, StageTen);
+	
+	    var _this = _possibleConstructorReturn(this, (StageTen.__proto__ || Object.getPrototypeOf(StageTen)).call(this, props));
+	
+	    _this.state = {
+	      css: {
+	        flexWrap: 'no-wrap'
+	      },
+	      winState: 'flamingo-img'
+	    };
+	    _this.solution = { flexWrap: 'wrap' };
+	    _this.handleSubmit = _this.handleSubmit.bind(_this);
+	    _this.update = _this.update.bind(_this);
+	    return _this;
+	  }
+	
+	  _createClass(StageTen, [{
+	    key: 'handleSubmit',
+	    value: function handleSubmit(e) {
+	      e.preventDefault();
+	      if (this.state.css.flexWrap === this.solution.flexWrap) {
+	        this.setState({ winState: 'bounce' });
+	        alert("you win!");
+	      }
 	    }
 	  }, {
 	    key: 'update',
@@ -11099,23 +11343,27 @@
 	              _react2.default.createElement(
 	                'div',
 	                { className: 'code-area' },
-	                _react2.default.createElement(
-	                  'pre',
-	                  null,
-	                  'land ',
-	                  '{',
-	                  _react2.default.createElement('br', null),
-	                  'display: flex;'
-	                ),
+	                'land ',
+	                '{',
+	                _react2.default.createElement('br', null),
 	                _react2.default.createElement(
 	                  'div',
-	                  null,
+	                  { className: 'indented-code' },
+	                  'display: flex;',
 	                  _react2.default.createElement(
-	                    'code',
-	                    null,
-	                    'flex-wrap:'
-	                  ),
-	                  _react2.default.createElement('input', { type: 'text', onChange: this.update("flexWrap"), className: 'user-input' })
+	                    'div',
+	                    { className: 'user-input-text' },
+	                    _react2.default.createElement(
+	                      'div',
+	                      null,
+	                      _react2.default.createElement(
+	                        'code',
+	                        null,
+	                        'flex-wrap:'
+	                      ),
+	                      _react2.default.createElement('input', { type: 'text', onChange: this.update("flexWrap"), className: 'user-input' })
+	                    )
+	                  )
 	                ),
 	                _react2.default.createElement('br', null),
 	                '}'
@@ -11154,216 +11402,10 @@
 	    }
 	  }]);
 	
-	  return StageNine;
+	  return StageTen;
 	}(_react2.default.Component);
 	
-	exports.default = StageNine;
-
-/***/ },
-/* 98 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactRouter = __webpack_require__(33);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var StageEight = function (_React$Component) {
-	  _inherits(StageEight, _React$Component);
-	
-	  function StageEight(props) {
-	    _classCallCheck(this, StageEight);
-	
-	    var _this = _possibleConstructorReturn(this, (StageEight.__proto__ || Object.getPrototypeOf(StageEight)).call(this, props));
-	
-	    _this.state = {
-	      css: {
-	        justifyContent: 'flex-start',
-	        alignItems: 'flex-start',
-	        flexDirection: 'row',
-	        flexWrap: 'row'
-	      },
-	      winState: 'flamingo-img'
-	    };
-	    _this.solution = {
-	      justifyContent: 'space-between',
-	      alignItems: 'center',
-	      flexDirection: 'column'
-	    };
-	    _this.handleSubmit = _this.handleSubmit.bind(_this);
-	    _this.update = _this.update.bind(_this);
-	    return _this;
-	  }
-	
-	  _createClass(StageEight, [{
-	    key: 'handleSubmit',
-	    value: function handleSubmit(e) {
-	      e.preventDefault();
-	      this.setState({ winState: 'bounce' });
-	      setTimeout(function () {
-	        _reactRouter.hashHistory.push('/9');
-	      }, 1000);
-	    }
-	  }, {
-	    key: 'update',
-	    value: function update(field) {
-	      var _this2 = this;
-	
-	      return function (e) {
-	        return _this2.setState(_defineProperty({}, field, e.currentTarget.value));
-	      };
-	    }
-	  }, {
-	    key: 'renderNextStage',
-	    value: function renderNextStage() {
-	      if (this.state.alignItems === this.solution.alignItems && this.state.justifyContent === this.solution.justifyContent) {
-	        return _react2.default.createElement(
-	          'button',
-	          { type: 'submit' },
-	          'Next stage!'
-	        );
-	      }
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'game-container' },
-	        _react2.default.createElement(
-	          'form',
-	          { className: 'game-form', onSubmit: this.handleSubmit },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'sidebar' },
-	            _react2.default.createElement(
-	              'h1',
-	              null,
-	              'Flexbox Flamingo'
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'instructions' },
-	              _react2.default.createElement(
-	                'p',
-	                null,
-	                'Welcome to Flexbox Flamingo! Guide the flamingos to their puddles by writing CSS code. Use',
-	                _react2.default.createElement(
-	                  'code',
-	                  null,
-	                  ' align-items '
-	                ),
-	                'to move the flamingo to her puddle. Use and combination of',
-	                _react2.default.createElement(
-	                  'code',
-	                  null,
-	                  ' align-items '
-	                ),
-	                ' and',
-	                _react2.default.createElement(
-	                  'code',
-	                  null,
-	                  ' justify-content'
-	                ),
-	                '.'
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'code-area-container' },
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'code-area' },
-	                _react2.default.createElement(
-	                  'pre',
-	                  null,
-	                  'land ',
-	                  '{',
-	                  _react2.default.createElement('br', null),
-	                  'display: flex;'
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'first-user-input' },
-	                  _react2.default.createElement(
-	                    'code',
-	                    null,
-	                    'justify-content:'
-	                  ),
-	                  _react2.default.createElement('input', { type: 'text', onChange: this.update("justifyContent"), className: 'user-input' })
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'second-user-input' },
-	                  _react2.default.createElement(
-	                    'code',
-	                    null,
-	                    'align-items:'
-	                  ),
-	                  _react2.default.createElement('input', { type: 'text', onChange: this.update("alignItems"), className: 'user-input' })
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'third-user-input' },
-	                  _react2.default.createElement(
-	                    'code',
-	                    null,
-	                    'flex-direction:'
-	                  ),
-	                  _react2.default.createElement('input', { type: 'text', onChange: this.update("flexDirection"), className: 'user-input' })
-	                ),
-	                _react2.default.createElement('br', null),
-	                '}'
-	              )
-	            ),
-	            this.renderNextStage()
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'view' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'board', style: this.state },
-	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: this.state.winState }),
-	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: this.state.winState }),
-	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_605/v1485306871/flamingo_nf6sft.png', className: this.state.winState })
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { style: this.solution, className: 'puddle' },
-	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_642,w_450/v1485307075/finalpuddle-01_xm6bdf.png', className: 'puddle-img' }),
-	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_642,w_450/v1485307075/finalpuddle-01_xm6bdf.png', className: 'puddle-img' }),
-	            _react2.default.createElement('img', { src: 'http://res.cloudinary.com/bronwyndunn/image/upload/c_scale,h_642,w_450/v1485307075/finalpuddle-01_xm6bdf.png', className: 'puddle-img' })
-	          )
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return StageEight;
-	}(_react2.default.Component);
-	
-	exports.default = StageEight;
+	exports.default = StageTen;
 
 /***/ },
 /* 99 */

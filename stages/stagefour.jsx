@@ -78,15 +78,16 @@ class StageFour extends React.Component {
             </div>
             <div className="code-area-container">
               <div className="code-area">
-                <pre>land {'{'}
+                #land {'{'}
                   <br />
-                  display: flex;
-                </pre>
-                <div>
-                  <code>align-items:</code>
-                  <input type="text" onChange={this.update("alignItems")} className="user-input"></input>
-                </div>
-                <br />
+                    <div className="indented-code">
+                    display: flex;
+                    <div className="user-input-text">
+                      <code>justify-content:</code>
+                        <input type="text" onChange={this.update("alignItems")} className="user-input"></input>
+                    </div>
+                  </div>
+                  <br />
                 {'}'}
               </div>
             </div>

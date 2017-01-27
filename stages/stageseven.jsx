@@ -19,11 +19,15 @@ class StageSeven extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.setState({winState: 'bounce'});
-    setTimeout(function(){
-      hashHistory.push(`/8`);
-    }, 1000);
+    if (this.state.css.flexDirection === this.solution.flexDirection) {
+      this.setState({winState: 'bounce'});
+      setTimeout(function(){
+        hashHistory.push(`/8`);
+      }, 1000);
+    }
   }
+
+
   update(field) {
     return e => this.setState({
       css: {
@@ -47,26 +51,47 @@ class StageSeven extends React.Component {
           <div className="sidebar">
             <h1>Flexbox Flamingo</h1>
             <div className="instructions">
-              <p>Welcome to Flexbox Flamingo! Guide the flamingos to their puddles by writing CSS code. Use
+              <p> Now use
                 <code> flex-direction </code>
                  to move the flamingo to her puddle.
-                 <code>flex-direction </code> establishes the main axis, and therefore defining the direction the items are placed.
+                 <code> flex-direction </code> establishes the main axis, and therefore defining the direction the items are placed.
               </p>
+              <ul className="flex-options">
+                <li>
+                  <code>row: </code>
+                  Items are placed along the horizontal axis.
+                </li>
+                <li>
+                  <code>row-reverse: </code>
+                  Items are placed along the horizontal axis but in the opposite direction.
+                </li>
+                <li>
+                  <code>column: </code>
+                  Items are placed along the vertical axis.
+                </li>
+                <li>
+                  <code>column-reverse: </code>
+                    Items are placed along the vertical axis but in the opposite direction.
+                </li>
+              </ul>
             </div>
             <div className="code-area-container">
               <div className="code-area">
-                <pre>land {'{'}
+                land {'{'}
                   <br />
+                  <div className="indented-code">
                   display: flex;
-                </pre>
-                <div className="first-user-input">
-                  <code>justify-content:</code>
-                  <input type="text" onChange={this.update("flexDirection")} className="user-input"></input>
-                </div>
+                  <div className="user-input-text">
+                    <div className="first-user-input">
+                      <code>flex-direction:</code>
+                      <input type="text" onChange={this.update("flexDirection")} className="user-input"></input>
+                    </div>
+                  </div>
                 <br />
                 {'}'}
               </div>
             </div>
+          </div>
             {this.renderNextStage()}
           </div>
         </form>

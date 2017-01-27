@@ -37,7 +37,7 @@ class StageEight extends React.Component {
   }
 
   renderNextStage() {
-    if ((this.state.alignItems === this.solution.alignItems) && (this.state.justifyContent === this.solution.justifyContent)) {
+    if ((this.state.alignItems === this.solution.alignItems) && (this.state.justifyContent === this.solution.justifyContent) && (this.state.flexDirection === this.solution.flexDirection)) {
       return(
         <button type="submit">Next stage!</button>
       );
@@ -51,31 +51,34 @@ class StageEight extends React.Component {
           <div className="sidebar">
             <h1>Flexbox Flamingo</h1>
             <div className="instructions">
-              <p>Welcome to Flexbox Flamingo! Guide the flamingos to their puddles by writing CSS code. Use
-                <code> align-items </code>
-                 to move the flamingo to her puddle. Use and combination of
-                 <code> align-items </code> and
-                   <code> justify-content</code>.
+              <p> Use a combination of
+                <code> align-items, </code>
+                 <code>justify-content, </code> and
+                   <code> flex-direction </code>
+                   to get the flamingos to their puddles.
               </p>
             </div>
             <div className="code-area-container">
               <div className="code-area">
-                <pre>land {'{'}
+                land {'{'}
                   <br />
-                  display: flex;
-                </pre>
-                <div className="first-user-input">
-                  <code>justify-content:</code>
-                  <input type="text" onChange={this.update("justifyContent")} className="user-input"></input>
-                </div>
-                <div className="second-user-input">
-                  <code>align-items:</code>
-                  <input type="text" onChange={this.update("alignItems")} className="user-input"></input>
-                </div>
-                <div className="third-user-input">
-                  <code>flex-direction:</code>
-                  <input type="text" onChange={this.update("flexDirection")} className="user-input"></input>
-                </div>
+                  <div className="indented-code">
+                    display: flex;
+                    <div className="user-input-text">
+                      <div className="first-user-input">
+                        <code>justify-content:</code>
+                        <input type="text" onChange={this.update("justifyContent")} className="user-input"></input>
+                      </div>
+                      <div className="second-user-input">
+                        <code>align-items:</code>
+                        <input type="text" onChange={this.update("alignItems")} className="user-input"></input>
+                      </div>
+                      <div className="third-user-input">
+                        <code>flex-direction:</code>
+                        <input type="text" onChange={this.update("flexDirection")} className="user-input"></input>
+                      </div>
+                    </div>
+                  </div>
                 <br />
                 {'}'}
               </div>
